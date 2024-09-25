@@ -19,6 +19,5 @@ public class Probatinas {
 
         System.out.println(segundosTotales +" segundos son " + horas + " horas" + minutos + " minutos " + segundos + " segundos" );
 
-
     }
 }
