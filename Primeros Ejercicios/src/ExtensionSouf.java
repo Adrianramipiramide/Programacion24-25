@@ -18,7 +18,6 @@ public class ExtensionSouf {
 
         double media = (a+b+c+d)/4;
 
-
         System.out.printf("La media de los números %.2f %.2f %.2f y %.2f es igual a %f",a ,b,c,d, media);
     }
 }
