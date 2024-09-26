@@ -1,12 +1,15 @@
 public class bucleSimple {
     public static void main(String[] args) {
 
-        for (int i = 0; i < 100; i++) {
+        try {
+            for (int i = 360; i > 159; i--) {
 
-
-            if(i%5==0){
-                System.out.println(i);
+                if (i % 20 == 0) {
+                    System.out.println(i);
+                }}
+            } catch(Exception e){
+                e.printStackTrace();
             }
+
         }
     }
-}
