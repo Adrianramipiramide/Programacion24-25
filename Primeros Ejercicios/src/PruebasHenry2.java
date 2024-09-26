@@ -15,17 +15,14 @@ public class PruebasHenry2 {
         System.out.println("Dime una hora");
         int hora = sc.nextInt();
 
-
-        if (hora > 23 || hora<0) {
-        System.out.println("El valor no es correcto");
-        } else if(hora <= 6 || hora>=21){
+        if (hora > 23 || hora < 0) {
+            System.out.println("El valor no es correcto");
+        } else if (hora <= 6 || hora >= 21) {
             System.out.println("Buenas noches");
-        } else if (hora <=12) {
+        } else if (hora <= 12) {
             System.out.println("Buenos días");
         } else if (hora <= 21) {
-            System.out.println("Buenas tardes" );
-        } else {
-            System.out.println("El valor no es correcto");
+            System.out.println("Buenas tardes");
         }
     }
 }

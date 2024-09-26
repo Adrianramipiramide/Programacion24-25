@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /*
 Escribe un programa que pida por teclado una cantidad de segundos
 y devuelva su correspondencia a horas, minutos y segundos
@@ -18,6 +17,5 @@ public class Probatinas {
         int segundos = (segundosTotales%60);
 
         System.out.println(segundosTotales +" segundos son " + horas + " horas" + minutos + " minutos " + segundos + " segundos" );
-
     }
 }
