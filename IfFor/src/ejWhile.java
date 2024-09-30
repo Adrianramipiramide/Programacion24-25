@@ -7,7 +7,7 @@ public class ejWhile {
              num -=20;
         } while (num>=160);
 
-        System.out.println();
+        System.out.println("\nHaciendo el While \n");
 
        int num2 = 0;
 
