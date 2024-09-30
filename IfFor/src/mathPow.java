@@ -10,10 +10,10 @@ public class mathPow {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numeroRepresentado = sc.nextInt();
-        double Raiz = Math.sqrt(numeroRepresentado);
+        double raiz = Math.sqrt(numeroRepresentado);
 
-        if(numeroRepresentado == Math.pow(Raiz,2)){
-            System.out.println("La raíz es correcta el resultado es " + Raiz);
+        if(numeroRepresentado == Math.pow(raiz,2)){
+            System.out.println("La raíz es correcta el resultado es " + raiz);
         }else{
             System.out.println("La raíz no devuelve un número entero");
         }
