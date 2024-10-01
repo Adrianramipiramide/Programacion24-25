@@ -32,9 +32,9 @@ public class ej6 {
         } else if (litros>=100 && litros<=500) {
             System.out.println("El consumo ha sido "+ (((litros-100)*0.20)+(100*0.15)));
         } else if (litros >=500 && litros<=1000) {
-            System.out.println("El consumo ha sido "+ (consumo500+((litros-500)*0.35)));
+            System.out.println("El consumo ha sido "+ ((((400)*0.20)+(100*0.15))+((litros-500)*0.35)));
         } else if (litros >=1000) {
-            System.out.println("El consumo ha sido "+ (consumo1000+((litros-1000)*0.80)));
+            System.out.println("El consumo ha sido "+ (((((400)*0.20)+(100*0.15))+((litros-500)*0.35))+((litros-1000)*0.80)));
         }
     }
 
