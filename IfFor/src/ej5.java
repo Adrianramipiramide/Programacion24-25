@@ -10,9 +10,14 @@ public class ej5 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un caracter");
         char caracter = sc.next().charAt(0);
-        if(caracter>=0 && caracter<=9){
+        if(caracter>=49 && caracter<=57){
             System.out.println(caracter+" es un caracter numérico");
+        } else if (caracter>=65 && caracter<=90) {
+            System.out.println(caracter + " Es un caracter en mayúsculas");
+        } else if (caracter>=97 && caracter<=122) {
+            System.out.println(caracter+" Es un caracter en minúsculas");
+        }else {
+            System.out.println("Introduzca un valor correcto");
         }
     }
-
 }
