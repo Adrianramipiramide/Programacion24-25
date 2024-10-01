@@ -8,9 +8,9 @@ Escribe un programa que solicite un carácter por teclado e informe de si es alf
 public class ej5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Introduzca un caracter");
         char caracter = sc.next().charAt(0);
-        if(caracter>0 && caracter<10){
+        if(caracter>=0 && caracter<=9){
             System.out.println(caracter+" es un caracter numérico");
         }
     }
