@@ -4,7 +4,7 @@ public class tablero {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = 5;
-        char[][] tablero=new char[6][6];
+        char[][] tablero=new char[7][7];
 
         char barco= 'b';
         tablero[2][3] = barco;
