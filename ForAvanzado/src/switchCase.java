@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -10,6 +11,9 @@ public class switchCase {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un número del 1 al 7");
         int numero =sc.nextInt();
+
+
+try{
 
         switch (numero){
             case 1:
@@ -34,6 +38,12 @@ public class switchCase {
                 System.out.println("Domingo");
                 break;
 
+            default:
+                System.out.println("Introduzca un número entre 1 y 7");
+
+        }
+            }catch (InputMismatchException e){
+                e.printStackTrace();
         }
     }
 }
