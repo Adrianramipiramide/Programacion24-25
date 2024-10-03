@@ -5,7 +5,7 @@ public class imprimirXdobleFor {
     public static void main(String[] args) {
         //Utilizando switch case por primera vez.
 
-        final int dimension = 4;
+        final int dimension = 8;
 
         for (int i = 1; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
