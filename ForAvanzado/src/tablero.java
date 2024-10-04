@@ -9,6 +9,7 @@ public class tablero {
         char barco= 'b';
         tablero[2][3] = barco;
         tablero[4][5] = barco;
+        tablero[1][5] = barco;
 //Tablero
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
