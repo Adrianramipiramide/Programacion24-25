@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -12,29 +13,32 @@ public class telefonoPrefijos {
         System.out.println("Ingrese el numero del telefono: ");
 
         try{
-            String numTelefono = sc.nextLine();
-            String prefijoHuesca = "974";
-            String prefijoZaragoza = "976";
-            String prefijoTeruel = "978";
+            int numTelefono = sc.nextInt();
+            int prefijo = numTelefono/1000000;
 
 
+            if(numTelefono > 999999999 ||numTelefono<111111111){
+                System.out.println("Introduzca un número correcto");
+            }else {
 
-            switch (numTelefono){
-                case "974":
-                    System.out.println("El teléfono es de Huesca");
-                    break;
-                case "976":
-                    System.out.println("El teléfono es de Zaragoza");
-                    break;
-                case "978":
-                    System.out.println("El teléfono es de Teruel");
-                    break;
-                default:
-                    System.out.println("El telefono no es de Aragon");
+                switch (prefijo) {
+                    case 974:
+                        System.out.println("El teléfono es de Huesca");
+                        break;
+                    case 976:
+                        System.out.println("El teléfono es de Zaragoza");
+                        break;
+                    case 978:
+                        System.out.println("El teléfono es de Teruel");
+                        break;
+                    default:
+                        System.out.println("El telefono no es de Aragon");
+                }
             }
+        }catch (InputMismatchException e){
+            System.out.println("Ha ocurrido un error");
+            e.getMessage();
 
-        }catch (Exception e){
-            e.printStackTrace();
         }
     }
 }
