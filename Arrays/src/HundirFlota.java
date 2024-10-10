@@ -66,7 +66,6 @@ public class HundirFlota {
                         } else {
                             System.out.print("x\t");
                         }
-
                     }
                     System.out.println();
                 }
