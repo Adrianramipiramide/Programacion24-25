@@ -15,9 +15,12 @@ public class arrayInverso {
         for (int i = 0; i < cantidadNumeros; i++) {
 
             listaNumeros[i] =sc.nextInt();
-   //Debe cambiarse el orden para que imprima el ultimo numero primero
-            System.out.println(listaNumeros[i]);
 
+
+        }
+        for (int i = cantidadNumeros-1; i >= 0; i--) {
+            //Debe cambiarse el orden para que imprima el ultimo numero primero
+            System.out.println(listaNumeros[i]);
         }
     }
 }
