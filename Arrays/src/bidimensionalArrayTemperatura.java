@@ -18,14 +18,12 @@ public class bidimensionalArrayTemperatura {
 
         }
         System.out.println();
-      /*
+
         maxTemperatura(temperaturaSemana);
         System.out.println();
         minTemperatura(temperaturaSemana);
-       */
-        System.out.println("Pruebas impresas");
-        for (int i = 0; i < temperaturaSemana[0].length; i++) {}
-        System.out.println(temperaturaSemana[0][1] + "\t");
+
+
     }
 
     //*21 por que hemos acordado un maximo de 20 grados de temperatura
