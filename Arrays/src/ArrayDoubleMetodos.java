@@ -8,18 +8,21 @@ Se usará un método para calcular la nota media y otro para calcular el número
 public class ArrayDoubleMetodos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double[] calificacion = new double[10];
-        System.out.println("Introduce las calificaciones de los 10 alumnos");
+        double[] calificacion = new double[5];
+        System.out.println("Introduce las calificaciones de los 30 alumnos");
         for (int i = 0; i < calificacion.length; i++) {
             calificacion[i] = sc.nextDouble();
             if(calificacion[i] >= 10){
                 System.out.println("Las notas no deben ser superiores a 10");
-
+                break;
+            } else if (calificacion[i]<0) {
+                break;
             }
         }
         try{
             MediaCurso(calificacion);
             SuspensosAprobados(calificacion);
+            notaMax(calificacion);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -48,4 +51,13 @@ public class ArrayDoubleMetodos {
         System.out.println("El numero de aprobados es: " + aprobados+ "\nEl numero de suspensos es: " + suspensos);
     }
 
+    public static void notaMax(double[] notas) {
+      double max = 0;
+      for (int i = 0; i < notas.length; i++) {
+          if (notas[i] > max) {
+              max = notas[i];
+          }
+      }
+        System.out.println("La nota más alta es "+ max);
+    }
 }

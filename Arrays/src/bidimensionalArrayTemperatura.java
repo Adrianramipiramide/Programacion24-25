@@ -9,25 +9,52 @@ public class bidimensionalArrayTemperatura {
         int[][] temperaturaSemana = new int[3][24];//{{1,2,3,4,5},{1,2,3,4,5,6,7,8,9,10,11,12},{10,12,14,16,18,20,22,24,26,28}};
 
         llenarArray(temperaturaSemana);
+        System.out.println("Dia Hora Temperatura");
+        for (int i = 0; i < 15; i++) {
+            System.out.print(temperaturaSemana[0][i] + "\t");
+            System.out.print(temperaturaSemana[1][i] + "\t\t");
+            System.out.print(temperaturaSemana[2][i] + " Cº");
+            System.out.println();
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Dia " + temperaturaSemana[0][i]);
-
-            for (int j = 0; j < 8; j++) {
-
-                System.out.print(" Hora " + temperaturaSemana[1][j]);
-                System.out.print(" Temperatura " + temperaturaSemana[2][j] + " Cº");
-                System.out.println();
-            }
         }
+        System.out.println();
+      /*
+        maxTemperatura(temperaturaSemana);
+        System.out.println();
+        minTemperatura(temperaturaSemana);
+       */
+        System.out.println("Pruebas impresas");
+        for (int i = 0; i < temperaturaSemana[0].length; i++) {}
+        System.out.println(temperaturaSemana[0][1] + "\t");
     }
-//*21 por que hemos acordado un maximo de 20 grados de temperatura
+
+    //*21 por que hemos acordado un maximo de 20 grados de temperatura
     public static void llenarArray(int[][] temperatura) {
         for (int i = 0; i < temperatura.length; i++) {
             for (int j = 0; j < temperatura[0].length; j++) {
-                
+
                 temperatura[i][j] = (int) (Math.random() * 21);
             }
+        }
+    }
+
+    public static void maxTemperatura(int[][] temperatura) {
+
+        for (int i = 0; i < temperatura[1].length; i++) {
+
+            if (temperatura[0][i] > 0) {
+              int  maxTempDia = temperatura[0][i];
+                System.out.println("La temperatura Máxima del dia " + (i + 1) + " es " + maxTempDia);
+            }
+        }
+    }
+
+    public static void minTemperatura(int[][] temperatura) {
+        for (int i = 0; i < temperatura[1].length; i++) {
+
+                int  minTempDia = temperatura[0][i];
+                System.out.println("La temperatura mínima del dia " + (i + 1) + " es " + minTempDia);
+
         }
     }
 }
