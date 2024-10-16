@@ -6,7 +6,7 @@
 public class bidimensionalArrayTemperatura {
     public static void main(String[] args) {
         //Dia hora temperatura
-        int[][] temperaturaSemana = new int[3][24];//{{1,2,3,4,5},{1,2,3,4,5,6,7,8,9,10,11,12},{10,12,14,16,18,20,22,24,26,28}};
+        int[][] temperaturaSemana = new int[7][24];//{{1,2,3,4,5},{1,2,3,4,5,6,7,8,9,10,11,12},{10,12,14,16,18,20,22,24,26,28}};
 
         llenarArray(temperaturaSemana);
         System.out.println("Dia Hora Temperatura");
@@ -22,8 +22,8 @@ public class bidimensionalArrayTemperatura {
         maxTemperatura(temperaturaSemana);
         System.out.println();
         minTemperatura(temperaturaSemana);
-
-
+        System.out.println();
+        mediaSemana(temperaturaSemana[0]);
     }
 
     //*21 por que hemos acordado un maximo de 20 grados de temperatura
@@ -32,27 +32,47 @@ public class bidimensionalArrayTemperatura {
             for (int j = 0; j < temperatura[0].length; j++) {
 
                 temperatura[i][j] = (int) (Math.random() * 21);
+                System.out.print(temperatura[i][j] + "Cº" + " \t");
             }
+            System.out.println();
         }
     }
 
     public static void maxTemperatura(int[][] temperatura) {
-
-        for (int i = 0; i < temperatura[1].length; i++) {
-
-            if (temperatura[0][i] > 0) {
-              int  maxTempDia = temperatura[0][i];
-                System.out.println("La temperatura Máxima del dia " + (i + 1) + " es " + maxTempDia);
-            }
+        int maxTempDia=0;
+        for (int i = 0; i < temperatura.length; i++) {
+            for (int j = 0; j < temperatura[0].length; j++) {
+                if(temperatura[i][j]>maxTempDia){
+                 maxTempDia = temperatura[i][j];
         }
+
+        }
+            System.out.println("La temperatura Máxima del dia " + (i + 1) + " es " + maxTempDia);
+    }
     }
 
     public static void minTemperatura(int[][] temperatura) {
-        for (int i = 0; i < temperatura[1].length; i++) {
+        int minTempDia=100;
+        for (int i = 0; i < temperatura.length; i++) {
+            for (int j = 0; j < temperatura[0].length; j++) {
+                if(temperatura[i][j]<minTempDia){
+                    minTempDia = temperatura[i][j];
+                }
 
-                int  minTempDia = temperatura[0][i];
-                System.out.println("La temperatura mínima del dia " + (i + 1) + " es " + minTempDia);
+            }
 
+            System.out.println("La temperatura mínima del dia " + (i+ 1) + " es " + minTempDia);
         }
+
+
+    }
+    public static void mediaSemana(int[] temperaturas){
+        double tempAcumulador=0;
+        for (int i = 0; i < temperaturas.length; i++) {
+            tempAcumulador  += temperaturas[i];
+           double media =tempAcumulador/7;
+            System.out.printf("La media de la semana "+ (i+1)+ " es %.1f",media);
+            System.out.println();
+                    }
     }
 }
