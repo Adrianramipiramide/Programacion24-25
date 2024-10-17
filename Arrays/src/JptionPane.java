@@ -5,21 +5,25 @@ import javax.swing.*;
 public class JptionPane {
     public static void main(String[] args) {
 
-        String traducidoNumero ;
-        int acumulador=0;
-
         String nombre=  JOptionPane.showInputDialog("Introduce un numero binario de 8 digitos");
+
+        int valor =(int) Math.pow(2,nombre.length()-1);
+
+
 
         for (int i = 0; i < nombre.length(); i++) {
             nombre.charAt(i);
-            if(i==0){
+            if(nombre.charAt(i)=='0'){
                 Math.pow(i,0);
-            } else if (i==1) {
-               acumulador == (int)Math.pow(nombre,2);
-            }
-        }
+            } else if (nombre.charAt(i)=='1') {
+                nombre +=valor;
 
-        JOptionPane.showMessageDialog(null,nombre + " es " + traducidoNumero);
+            }
+            valor /=2;
+
+        }
+        JOptionPane.showMessageDialog(null,nombre + " es " + valor);
+
 
     }
 }
