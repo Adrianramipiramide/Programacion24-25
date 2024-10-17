@@ -8,35 +8,49 @@ public class ArrayDoblePueblos {
 
         llenarArray(numHabitantes);
         System.out.println();
+        System.out.println("Array Ordenado");
         ordenarArray(numHabitantes);
 
     }
-    public static void ordenarArray(int[] habitantesNum){
-        for (int i = 0; i < habitantesNum.length; i++) {
-            int numActual=habitantesNum[i];
-            int numProximo=habitantesNum[i+1];
 
-            if(numProximo<=numActual){
-                numActual=numProximo;
-                System.out.println("El número de habitantes de la localidad "+ (i+1) + " es " + habitantesNum[i]);
+    public static void ordenarArray(int[] habitantesNum) {
+
+        try {
+            for (int i = 0; i < habitantesNum.length - 1; i++) {
+                for (int j = 0; j < habitantesNum.length -1 ; j++) {
+
+                    int numActual = habitantesNum[j];
+                    int numProximo = habitantesNum[j + 1];
+
+                    if (numProximo < numActual) {
+                        habitantesNum[j] = numProximo;
+                        habitantesNum[j + 1] = numActual;
+                    }
+
+                }
+
             }
+
+
+            for (int i = 0; i < habitantesNum.length; i++) {
+                System.out.println("El número de habitantes de la localidad " + (i + 1) + " es " + habitantesNum[i]);
+            }
+
+
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Ha ocurrido un error al ordenar el array");
         }
 
-        for (int i = 0; i < habitantesNum.length; i++) {
-
-        }
 
     }
-    public static void llenarArray(int[] habitantesNum){
+
+    public static void llenarArray(int[] habitantesNum) {
 
         for (int i = 0; i < habitantesNum.length; i++) {
-            habitantesNum[i] = (int) (Math.random()*1000);
-            while(habitantesNum[i]<100){
-                habitantesNum[i]=(int) (Math.random()*1000);
+            habitantesNum[i] = (int) (Math.random() * 1000);
+            while (habitantesNum[i] < 100) {
+                habitantesNum[i] = (int) (Math.random() * 1000);
             }
-        }
-        for (int i = 0; i < habitantesNum.length; i++) {
-            System.out.println("El número de habitantes de la localidad "+ (i+1) + " es " + habitantesNum[i]);
         }
     }
 }

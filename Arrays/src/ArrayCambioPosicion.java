@@ -15,19 +15,13 @@ public class ArrayCambioPosicion {
             array[i] = sc.nextInt();
         }
 
-
-//la i empieza en el 2 y no en el 0
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == array[0]) {
-                array[1] = array[0];
-
-            } else if (array[i]==array[14]) {
-                array[0] = array[14];
-            } else {
-                array[i] = array[i + 1];
-            }
-
+        int num=array[14];
+        for (int i = array.length -1 ; i >0; i--) {
+            array[i]= array[i-1];
         }
+        array[0]=num;
+
+
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
