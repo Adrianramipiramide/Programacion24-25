@@ -1,0 +1,5 @@
+Arrays Dobles(hacer tablas...)
+JOptionPane
+Ordenar método burbuja
+Cadenas de caracteres pasadas a int (charAt)
+Math.random
