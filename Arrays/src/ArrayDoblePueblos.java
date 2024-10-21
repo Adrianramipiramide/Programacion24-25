@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 Rellena un array con los valores del número de habitantes de 200 poblaciones
 de entre 100 y 1000 habitantes y ordénalos de mayor a menor. Comprueba si alguna población tiene 500 habitantes exáctamente.
@@ -9,7 +11,13 @@ public class ArrayDoblePueblos {
         llenarArray(numHabitantes);
         System.out.println();
         System.out.println("Array Ordenado");
-        ordenarArray(numHabitantes);
+     //   ordenarArray(numHabitantes);
+        //Arrays.binarySearch
+        System.out.println("La posición en la que se encuentra el número 979 es "+Arrays.binarySearch(numHabitantes, 979));
+
+        Arrays.sort(numHabitantes);
+        mostrarArray(numHabitantes);
+       // System.out.println();
 
     }
 
@@ -51,6 +59,12 @@ public class ArrayDoblePueblos {
             while (habitantesNum[i] < 100) {
                 habitantesNum[i] = (int) (Math.random() * 1000);
             }
+        }
+    }
+
+    public static void mostrarArray(int[] numhabitantes){
+        for (int i = 0; i < numhabitantes.length; i++) {
+            System.out.println("El número de habitantes de la localidad " + (i + 1) + " es " + numhabitantes[i]);
         }
     }
 }
