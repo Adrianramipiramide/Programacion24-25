@@ -12,17 +12,9 @@ public class DniSortBinarySearch {
         int posicionPersona = 0;
 
         String[] clientes = new String[Dimension];
-
-<<<<<<< HEAD
         ponerALaCola(clientes, Dimension, posicionPersona);
         mostrarCola(clientes, posicionPersona, Dimension);
         sacarDeCola(clientes, Dimension, posicionPersona);
-=======
-    public static void ponerALaCola(String[] personasDNI){
-
-    }
->>>>>>> be5f550 (poco)
-
 
     }
 
