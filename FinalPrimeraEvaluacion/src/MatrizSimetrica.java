@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /*
-Realiza un método que devuelva cierto si la matriz (tabla de números) de dimensiones NxN que se le pasa como argumento es simétrica.
+Realiza un metodo que devuelva cierto si la matriz (tabla de números) de dimensiones NxN que se le pasa como argumento es simétrica.
 Una matriz A es simétrica si a(i,j) = a(j,i).
  */
 public class MatrizSimetrica {
@@ -15,6 +15,13 @@ public class MatrizSimetrica {
         esSimetrica(matriz, Dimension);
     }
 
+    /**
+     *
+     *este metodo genrea una matriz
+     * @param matriz int[][]
+     * @param Dimension int
+     * @return int[][]
+     * */
     public static int[][] generarMatriz(int[][] matriz, int Dimension) {
         System.out.println("Introduce los valores de la matriz");
         for (int i = 0; i < Dimension; i++) {
@@ -30,10 +37,14 @@ public class MatrizSimetrica {
             System.out.println();
         }
 
-
         return matriz;
     }
 
+    /**
+     * @param matriz
+     * @param dimension
+     * @return
+     */
     public static boolean esSimetrica(int[][] matriz, int dimension) {
         boolean simetria= false;
         int contador = 0;
@@ -49,8 +60,6 @@ public class MatrizSimetrica {
                 }
             }
         }
-
-
         System.out.println(simetria);
         return simetria;
     }

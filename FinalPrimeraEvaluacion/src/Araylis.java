@@ -13,12 +13,14 @@ public class Araylis {
     public static void main(String[] args) {
 
         notaMaxima();
+        System.out.println();
         mostrarNotaMin();
+        System.out.println();
         mostrarMediaCurso();
         System.out.println();
         for (int i = 0; i < notas.length; i++) {
             for (int j = 0; j < notas[0].length; j++) {
-                System.out.print(notas[i][j]+ "\t\t");
+                System.out.print(notas[i][j] + "\t\t");
             }
             System.out.println();
         }
@@ -27,42 +29,73 @@ public class Araylis {
 
     public static void notaMaxima() {
         double max1 = 0;
+        double max2 = 0;
+        double max3 = 0;
 
         for (int i = 0; i < notas.length; i++) {
             for (int j = 0; j < notas[0].length; j++) {
-                if (notas[i][j] > notas[0][j]) {
-                    max1 = notas[i][j];
+                if (notas[0][j] > max1) {
+                    max1 = notas[0][j];
                 }
             }
         }
-        System.out.println("La nota máxima del alumno 1 es "+ max1);
+
+        for (int i = 0; i < notas.length; i++) {
+            for (int j = 0; j < notas[0].length; j++) {
+                if (notas[1][j] > max2) {
+                    max2 = notas[1][j];
+                }
+            }
+        }
+
+        for (int i = 0; i < notas.length; i++) {
+            for (int j = 0; j < notas[0].length; j++) {
+                if (notas[2][j] > max3) {
+                    max3 = notas[2][j];
+                }
+            }
+        }
 
         System.out.println();
-        System.out.println("La nota máxima es "+max1);
+        System.out.println("La nota máxima del alumno 1 es " + max1);
+        System.out.println("La nota máxima del alumno 2 es " + max2);
+        System.out.println("La nota máxima del alumno 3 es " + max3);
     }
 
-    public static void mostrarNotaMin(){
-        double min = 10;
+    public static void mostrarNotaMin() {
+        double min1 = 10;
+        double min2 = 10;
+        double min3 = 10;
         for (int i = 0; i < notas.length; i++) {
             for (int j = 0; j < notas[0].length; j++) {
-                if(notas[i][j]<min){
-                    min = notas[i][j];
+                if (notas[0][j] <= min1) {
+                    min1 = notas[0][j];
                 }
+                if (notas[1][j] <= min2) {
+                    min2 = notas[1][j];
+                }
+                if(notas[2][j]<min3){
+                    min3 = notas[2][j];
+                }
+
             }
         }
-        System.out.println("La nota mínima es "+ min);
+        System.out.println("La nota mínima del alumno 1 es " + min1);
+        System.out.println("La nota mínima del alumno 2 es " + min2);
+        System.out.println("La nota mínima del alumno 3 es " + min3);
     }
 
-    public static void mostrarMediaCurso(){
-        double mediaCurso=0;
-        double media=0;
+
+    public static void mostrarMediaCurso() {
+        double mediaCurso = 0;
+        double media = 0;
         for (int i = 0; i < notas.length; i++) {
             for (int j = 0; j < notas[0].length; j++) {
 
                 mediaCurso += notas[i][j];
             }
         }
-        media= mediaCurso/12;
+        media = mediaCurso / 12;
         System.out.printf("La nota media del curso es %.2f", media);
     }
 }
