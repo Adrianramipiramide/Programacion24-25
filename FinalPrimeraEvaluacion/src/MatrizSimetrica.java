@@ -17,7 +17,7 @@ public class MatrizSimetrica {
 
     /**
      *
-     *este metodo genrea una matriz
+     *este metodo genrea una matriz de la dimension indicada por teclado
      * @param matriz int[][]
      * @param Dimension int
      * @return int[][]
