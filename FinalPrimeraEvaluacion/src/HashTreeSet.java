@@ -30,7 +30,7 @@ public class HashTreeSet {
 
         System.out.println("Introduce el significado");
         palabra=sc.nextLine();
-        
+
 
 
     }
