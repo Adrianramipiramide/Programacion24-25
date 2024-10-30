@@ -14,7 +14,7 @@ public class BibliotecaExamen {
         ArrayList<String> listaUsuarios = new ArrayList<>();
         HashMap<String, String> prestamos = new HashMap<>();
 
-        
+
         registrarLibro(listaLibros, "Deep Work", "Josh");
         registrarLibro(listaLibros, "El arte de la guerra", "Sun Tzu");
         registrarLibro(listaLibros, "El Almanaque de Naval", "Tim Ferris");
