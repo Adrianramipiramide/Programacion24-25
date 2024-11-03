@@ -11,11 +11,12 @@ siguientes matrices que son también mágicas (en la imágen)
 Intenta crear un generador de matrices mágicas
  */
 public class MatrizMagica2 {
-    static final int DIMENSION = 5;
+    static final int DIMENSION = 3;
 
     public static void main(String[] args) {
         int[][] matriz = new int[DIMENSION][DIMENSION];
         generarMatriz(matriz);
+        comprobarSiMagica(matriz);
     }
 
     public static void generarMatriz(int[][] matriz) {
@@ -26,16 +27,43 @@ public class MatrizMagica2 {
             }
         }
 
-    }
-    public static void comprobarSiMagica(int[][] matriz) {
-
         for (int i = 0; i < DIMENSION; i++) {
             for (int j = 0; j < DIMENSION; j++) {
-                int fila = 0;
-                fila += matriz[i][0] ;
-                
+                System.out.print(matriz[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static boolean comprobarSiMagica(int[][] matriz) {
+        int fila = 0;
+        int diagonal = 0;
+        boolean esMagica = true;
+        for (int i = 0; i < DIMENSION; i++) {
+            for (int j = 0; j < DIMENSION; j++) {
+
+                if (matriz[i][j] > Math.pow(DIMENSION, 2)) {
+                    esMagica = false;
+                }
+                if (j == 0) {
+                    fila += matriz[i][0];
+                }
+
             }
         }
+        for (int i = 0; i < DIMENSION; i++) {
+            diagonal += matriz[i][i];
+        }
+
+        if (diagonal != fila) {
+            esMagica = false;
+        }
+        System.out.println("La suma de la fila es " + fila);
+        System.out.println("La suma de la diagonal es " + diagonal);
+        System.out.println("La matriz es magica :" + esMagica);
+
+        return esMagica;
     }
 }
 
