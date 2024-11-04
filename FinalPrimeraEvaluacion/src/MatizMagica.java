@@ -6,6 +6,7 @@ La suma de los elementos de cada fila, cada columna, y las dos diagonales dan el
 la matriz siguiente de dimensiones 5x5 contiene todos los elementos del 1 al 25 y tiene como suma común 65.
 Desarrolla un programa que lea una matriz y nos indique si es mágica. Nota: Puedes probar el programa con las siguientes matrices que son también mágicas:
  */
+
 public class MatizMagica {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

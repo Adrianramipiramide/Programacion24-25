@@ -33,9 +33,14 @@ public class MatrizMagica2 {
             }
             System.out.println();
         }
-
     }
 
+    /**
+     * El metodo compreba si la matriz es mágica evaluando si los numeros son correctos
+     *
+     * @param matriz int[][]
+     * @return boolean
+     */
     public static boolean comprobarSiMagica(int[][] matriz) {
         int fila = 0;
         int diagonal = 0;
@@ -43,13 +48,12 @@ public class MatrizMagica2 {
         for (int i = 0; i < DIMENSION; i++) {
             for (int j = 0; j < DIMENSION; j++) {
 
-                if (matriz[i][j] > Math.pow(DIMENSION, 2)) {
+                if (matriz[i][j] > Math.pow(DIMENSION, 2) || matriz[i][j] < 0) {
                     esMagica = false;
                 }
                 if (j == 0) {
                     fila += matriz[i][0];
                 }
-
             }
         }
         for (int i = 0; i < DIMENSION; i++) {
@@ -59,11 +63,47 @@ public class MatrizMagica2 {
         if (diagonal != fila) {
             esMagica = false;
         }
+         filasYcolumnasIguales(matriz);
+
+
         System.out.println("La suma de la fila es " + fila);
         System.out.println("La suma de la diagonal es " + diagonal);
         System.out.println("La matriz es magica :" + esMagica);
 
         return esMagica;
+    }
+//Dividir en varios metodos columnas filas y diagonales por separado
+    public static boolean filasYcolumnasIguales(int[][] matriz) {
+        boolean magica = true;
+        int fila = 0;
+        int columna = 0;
+        int diagonal = 0;
+        int diagonalOpuesta = 0;
+        for (int i = 0; i < DIMENSION; i++) {
+
+            fila += matriz[i][DIMENSION - i];
+
+        }
+        if(fila != fila){
+            magica=false;
+        }
+
+        for (int i = 0; i < DIMENSION; i++) {
+            columna += matriz[0][i];
+
+        }
+        for (int i = 0; i < DIMENSION; i++) {
+            diagonal += matriz[i][i];
+        }
+
+        for (int i = 0; i < DIMENSION; i++) {
+            diagonalOpuesta += matriz[DIMENSION - i][i];
+        }
+
+        if (fila != columna || fila != diagonal) {
+            magica = false;
+        }
+        return magica;
     }
 }
 
