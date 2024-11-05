@@ -22,7 +22,7 @@ public class MetodosLibros {
         generos.add("Cocina");
         System.out.println(generos);
     }
-
+//Iterator es necesario??????????????
     public static String buscarPorAutor(String autor, HashSet<String> libros) {
         autor = autor.toLowerCase();
         //No deberia haber usado HashSet porque me lo muestra mal, me pone los libros y los autores desordenados como quiere, como lo muestro correctamente?
@@ -35,6 +35,13 @@ public class MetodosLibros {
         return autor;
     }
 
+    /**
+     * Metodo para eliminar libros
+     *
+     * @param titulo String
+     * @param libros HashSet<String>
+     * @return String
+     */
     public static String eliminarLibro(String titulo, HashSet<String> libros) {
         titulo = titulo.toLowerCase();
         if (libros.contains(titulo)) {
