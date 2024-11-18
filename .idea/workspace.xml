@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1138479-cb26-40a1-a941-995267266bcb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Primeros Ejercicios/src/ExtensionSouf.java" beforeDir="false" afterPath="$PROJECT_DIR$/Primeros Ejercicios/src/ExtensionSouf.java" afterDir="false" />
-    </list>
+    <list default="true" id="e1138479-cb26-40a1-a941-995267266bcb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop/Programacion24-25/Primeros Ejercicios",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/Programacion24-25/Evaluacioin2Inicio/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +72,7 @@
       <updated>1726739921910</updated>
       <workItem from="1727272956763" duration="816000" />
       <workItem from="1727273789474" duration="20000" />
+      <workItem from="1731917961731" duration="36000" />
     </task>
     <servers />
   </component>
