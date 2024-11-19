@@ -1,13 +1,14 @@
 public class Perro {
+    private int edad;
     private String nombre;
     private String color;
-    private int edad;
     private double peso;
 
-    public Perro(String nombre, String color, int edad, double peso) {
+
+    public Perro(int edad, String nombre, String color, double peso) {
+        this.edad = edad;
         this.nombre = nombre;
         this.color = color;
-        this.edad = edad;
         this.peso = peso;
     }
 
@@ -16,24 +17,12 @@ public class Perro {
     }
 
     public int getEdad(){
-        System.out.println("La edad del perro " + nombre + " es " + edad);
+        System.out.println("La edad de " + nombre + " es " + edad);
         return edad;
     }
-    public double getPeso(){
-        System.out.println("El peso del perro " + nombre + " es " + peso);
-        return peso;
-    }
-    public String getNombre(){
-        System.out.println("El nobel del perro es " + nombre);
-        return nombre;
-    }
 
-    @Override
-    public String toString() {
-        return "Perro " +
-                "nombre='" + nombre + '\'' +
-                ", color='" + color + '\'' +
-                ", edad=" + edad +
-                ", peso=" + peso ;
+    public String getColor(){
+        System.out.println("El color es " + color);
+        return color;
     }
 }
