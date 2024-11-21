@@ -21,6 +21,11 @@ public class Perro {
         return edad;
     }
 
+    public String getNombre() {
+        System.out.printf("El nombre del perro es " + nombre);
+        return nombre;
+    }
+
     public String getColor(){
         System.out.println("El color es " + color);
         return color;
