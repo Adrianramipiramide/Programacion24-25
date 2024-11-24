@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Entradas {
@@ -38,7 +37,6 @@ public class Entradas {
                 System.out.println("Lo siento no quedan entradas");
             }
 
-
         } else if (tipoEntrada == 3) {
             if (ENTRADASVIP - numEntradas > 0) {
                 ENTRADASVIP -= numEntradas;
@@ -46,7 +44,6 @@ public class Entradas {
             } else {
                 System.out.println("Lo siento no quedan entradas");
             }
-
         }
     }
 }
