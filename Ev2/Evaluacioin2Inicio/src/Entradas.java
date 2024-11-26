@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Entradas {
     private static int ENTRADASRESTANTES = 1000;
