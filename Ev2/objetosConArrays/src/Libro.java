@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Locale;
+
 public class Libro {
     private String titulo;
     private Persona autor;
@@ -6,10 +10,10 @@ public class Libro {
     private int edicion;
     private String editorial;
     private String pais;
-    //private date fecha;
+    private Fecha fecha;
 
 
-    public Libro(String titulo, Persona autor, String ISBN, int paginas, int edicion, String editorial, String pais) {
+    public Libro(String titulo, Persona autor, String ISBN, int paginas, int edicion, String editorial, String pais, Fecha fecha) {
         this.titulo = titulo;
         this.autor = autor;
         this.ISBN = ISBN;
@@ -17,6 +21,7 @@ public class Libro {
         this.edicion = edicion;
         this.editorial = editorial;
         this.pais = pais;
+        this.fecha = fecha;
     }
 
     public Libro() {
@@ -77,6 +82,14 @@ public class Libro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public Fecha getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(int year, int month, int day) {
+        this.fecha = fecha;
     }
 
     @Override
