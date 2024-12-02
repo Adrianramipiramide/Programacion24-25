@@ -10,5 +10,8 @@ public class MainProducto {
         Producto producto5 = new Producto(345534, "Anillo", "Joya",1020,23);
 
         ArrayProducto.agregarProducto(producto2, lista);
+        ArrayProducto.agregarProducto(producto3, lista);
+        System.out.println(lista);
+        ArrayProducto.mostrarProducto(1,lista);
     }
 }
