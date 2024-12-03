@@ -13,5 +13,8 @@ public class MainProducto {
         ArrayProducto.agregarProducto(producto3, lista);
         System.out.println(lista);
         ArrayProducto.mostrarProducto(1,lista);
+        System.out.println(producto2.getPrecio());
+        ArrayProducto.eliminarProducto(producto3,lista);
+        System.out.println(lista);
     }
 }
