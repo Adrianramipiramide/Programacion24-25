@@ -14,6 +14,22 @@ public class Libro {
         this.isbn = isbn;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
     public Libro addlibro(ArrayList<Libro> libros, String titulo, String autor, int year, String isbn) {
         libros.add(new Libro(titulo, autor, year, isbn));
         return new Libro(titulo, autor, year, isbn);
