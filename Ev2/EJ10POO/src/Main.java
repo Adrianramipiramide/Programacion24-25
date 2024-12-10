@@ -1,4 +1,5 @@
-import java.util.TreeSet;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /*
 Desarrollar una lista de Libros (titulo, autor y número de páginas) ordenada por título.
@@ -13,11 +14,22 @@ Habrá un método que muestre toda la información de todos los libros de la col
  */
 public class Main {
     public static void main(String[] args) {
-        TreeSet<Libro> listaLibros = new TreeSet<Libro>();
+        ArrayList<Libro> listaLibros = new ArrayList<>();
         Libro libro1 = new Libro(250,"Make Time", "Juan");
         Libro libro2 = new Libro(320, "Limitless", "James Clear");
         Libro libro3 = new Libro(250, "Elon Musk", "Aitor");
+        Libro libro4 = new Libro(250, "Aragón", "Anselmo");
 
+        listaLibros.add(libro1);
+        listaLibros.add(libro2);
+        listaLibros.add(libro3);
+        listaLibros.add(libro4);
+
+        Libro.mostrarInfoLibros(listaLibros);
+        System.out.println(Libro.getLibroPorPosicion(2,listaLibros));
+       // Libro.eliminarLibro(1, listaLibros);
+        System.out.println("\n");
+        Libro.ordenarPorTitulo(listaLibros);
 
     }
 }
