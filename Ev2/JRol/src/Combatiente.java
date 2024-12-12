@@ -1,4 +1,4 @@
 public interface Combatiente {
-    public int golpeEficaz(int vida);
+    public int golpeEficaz(Personaje personaje);
 
 }

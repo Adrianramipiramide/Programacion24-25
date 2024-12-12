@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Desarrolla un sistema para un juego de rol que incorpore interfaces, herencia, polimorfismo, comparadores y enumeraciones.
 El juego debe incluir los siguientes elementos:
@@ -18,8 +20,16 @@ public class MainRolJ {
         Mago mago1 = new Mago("Julian", 26,80, TipoArma.FrancoTirador);
         Guerrero guerrero1 = new Guerrero("Pedro",40,100, TipoArma.Cuchillo, 80);
 
-        mago1.usarHabilidad(arquero1.getVida(),arquero1);
+
+        ArrayList<Personaje> listaPersonaje =new ArrayList<>();
+        listaPersonaje.add(arquero1);
+        listaPersonaje.add(mago1);
+        listaPersonaje.add(guerrero1);
+
+
+        System.out.println(arquero1.usarHabilidad(mago1));
         System.out.println(arquero1);
+        System.out.println(mago1);
 
     }
 }

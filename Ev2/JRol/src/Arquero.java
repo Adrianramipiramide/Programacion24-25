@@ -4,14 +4,12 @@ public class Arquero extends Personaje{
         super(nombre, edad, vida, tipoArma);
     }
     @Override
-    public int usarHabilidad(int vida, Personaje personaje){
+    public int usarHabilidad(Personaje personaje){
         System.out.println("Tirando flechas Flechas");
-        vida -=18;
-        return vida;
+        return personaje.setVida(personaje.getVida()-50);
     }
     @Override
-    public int golpeEficaz(int vida){
-        vida -= 10;
-        return vida;
+    public int golpeEficaz(Personaje personaje){
+        return personaje.setVida(getVida())-30;
     }
 }

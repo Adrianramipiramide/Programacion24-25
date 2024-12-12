@@ -6,13 +6,11 @@ public class Guerrero extends Personaje{
         this.peso = peso;
     }
     @Override
-    public int usarHabilidad(int vida, Personaje personaje){
-        vida -=10;
-        return vida;
+    public int usarHabilidad(Personaje personaje){
+        return personaje.setVida(personaje.getVida()-10);
     }
     @Override
-    public int golpeEficaz(int vida){
-        vida -= 25;
-        return vida;
+    public int golpeEficaz(Personaje personaje){
+        return personaje.setVida(personaje.getVida())-13;
     }
 }

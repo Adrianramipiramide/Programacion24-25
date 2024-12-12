@@ -1,3 +1,3 @@
 public interface Habilidad {
-    public int usarHabilidad(int vida, Personaje personaje);
+    public int usarHabilidad(Personaje personaje);
 }

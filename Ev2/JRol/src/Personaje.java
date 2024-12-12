@@ -11,12 +11,11 @@ public abstract class Personaje implements Combatiente, Habilidad{
         this.tipoArma = tipoArma;
     }
 
-    public abstract int usarHabilidad(int vida, Personaje personaje);
+    public abstract int usarHabilidad(Personaje personaje);
 
     public String getNombre() {
         return nombre;
     }
-
 
     public int getEdad() {
         return edad;
@@ -26,8 +25,9 @@ public abstract class Personaje implements Combatiente, Habilidad{
         return vida;
     }
 
-    public void setVida(int vida) {
+    public int setVida(int vida) {
         this.vida = vida;
+        return vida;
     }
 
     public TipoArma getTipoArma() {
