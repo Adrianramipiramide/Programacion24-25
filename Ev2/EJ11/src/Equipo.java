@@ -21,6 +21,11 @@ public class Equipo {
         return emailE;
     }
 
+    public void mostrarJugadoresEquipos(HashSet<Alumno>listaAlumnos){
+        System.out.println(listaAlumnos);
+
+    }
+
     public HashSet<Alumno> getListaAlumno() {
         return listaAlumnos;
     }

@@ -1,9 +1,10 @@
 import java.util.HashSet;
-
 public class Main {
     public static void main(String[] args) {
         HashSet<Equipo> listaEquipos = new HashSet<>();
         HashSet<Alumno> listaAlumno = new HashSet<>();
+        HashSet<Alumno> atleticoMonzonLista = new HashSet<>();
+
         Equipo TeamRocket = new Equipo("Team Rocket", "teamrocket@gmail.com");
         Equipo AtleticoMonzon = new Equipo("Atletico Monzon", "monzon@gmail.com");
         Equipo Abombaos = new Equipo("Abombaos","abombaos@gmail.com");
@@ -21,8 +22,11 @@ public class Main {
         listaAlumno.add(alumno3);
 
         Equipo.mostrarEquipos(listaEquipos);
+        atleticoMonzonLista.add(alumno1);
+        atleticoMonzonLista.add(alumno2);
+        atleticoMonzonLista.add(alumno3);
 
-        System.out.println(AtleticoMonzon.getListaAlumno() );
+        AtleticoMonzon.mostrarJugadoresEquipos(atleticoMonzonLista);
 
     }
 }
