@@ -1,13 +1,13 @@
-import java.util.ArrayList;
 
-public class Alumno extends Equipo{
+
+public class Alumno {
     private String nombre;
     private String apellido;
     private String centroEducativo;
 
 
-    public Alumno(String nombre, String emailEquipo, String nombreEquipo, String apellido, String centroEducativo) {
-        super(nombreEquipo, emailEquipo);
+    public Alumno(String nombre, String apellido, String centroEducativo) {
+
         this.nombre = nombre;
         this.apellido = apellido;
         this.centroEducativo = centroEducativo;
