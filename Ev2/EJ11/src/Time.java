@@ -11,7 +11,6 @@ public class Time {
         System.out.println(fechaNacimiento.getDayOfWeek());
 
         LocalDate ahora = LocalDate.now();
-
         Period periodo = Period.between(ahora,fechaNacimiento);
         long dias = ChronoUnit.DAYS.between(fechaNacimiento,ahora);
         System.out.println(dias);
