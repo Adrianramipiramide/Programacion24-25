@@ -61,7 +61,6 @@ public class Libro {
 
         System.out.println(listaOrdenada);
 
-
     }
 
     public static void mostrarInfoLibros(ArrayList<Libro> listaLIbros) {

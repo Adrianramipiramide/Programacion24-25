@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+
 public class Main {
     public static void main(String[] args) {
-        HashSet<Equipo> listaEquipos = new HashSet<>();
+        HashMap<Equipo,Integer>counterEquipo = new HashMap<>();
+        ArrayList<Equipo> listaEquipos = new ArrayList<>();
         HashSet<Alumno> listaAlumno = new HashSet<>();
         HashSet<Alumno> abombaosLista = new HashSet<>();
         HashSet<Alumno> teamRocketLista = new HashSet<>();
@@ -9,18 +13,25 @@ public class Main {
 
         Equipo TeamRocket = new Equipo("Team Rocket", "teamrocket@gmail.com");
         Equipo AtleticoMonzon = new Equipo("Atletico Monzon", "monzon@gmail.com");
-        Equipo Abombaos = new Equipo("Abombaos","abombaos@gmail.com");
+        Equipo Abombaos = new Equipo("Abombaos", "abombaos@gmail.com");
+        Equipo Esplus = new Equipo("Esplus", "esplus@gmail.com");
 
-        listaEquipos.add(TeamRocket);
-        listaEquipos.add(AtleticoMonzon);
-        listaEquipos.add(Abombaos);
 
-        Alumno alumno1 = new Alumno("Jaime","Badia", "Salesianos");
-        Alumno alumno2 = new Alumno("Jorge","Ramos", "MordeFuentes");
-        Alumno alumno3 = new Alumno("Diego","Castel","Salesianos");
-        Alumno alumno4 = new Alumno("Miguel", "Tovar","Salesianos");
-        Alumno alumno5 = new Alumno("Francho","Carrera", "Mordefuentes");
-        Alumno alumno6 = new Alumno("Marcos",  "Monter", "Pedro J Rubio");
+        Equipo.addEquipo(listaEquipos, counterEquipo,Esplus);
+        Equipo.addEquipo(listaEquipos, counterEquipo,Abombaos);
+        Equipo.addEquipo(listaEquipos, counterEquipo,AtleticoMonzon);
+        Equipo.addEquipo(listaEquipos, counterEquipo,Abombaos);
+        Equipo.addEquipo(listaEquipos, counterEquipo,TeamRocket);
+        Equipo.addEquipo(listaEquipos, counterEquipo,Abombaos);
+        Equipo.addEquipo(listaEquipos, counterEquipo,Esplus);
+        Equipo.addEquipo(listaEquipos, counterEquipo,Esplus);
+
+        Alumno alumno1 = new Alumno("Jaime", "Badia", "Salesianos");
+        Alumno alumno2 = new Alumno("Jorge", "Ramos", "MordeFuentes");
+        Alumno alumno3 = new Alumno("Diego", "Castel", "Salesianos");
+        Alumno alumno4 = new Alumno("Miguel", "Tovar", "Salesianos");
+        Alumno alumno5 = new Alumno("Francho", "Carrera", "Mordefuentes");
+        Alumno alumno6 = new Alumno("Marcos", "Monter", "Pedro J Rubio");
         Alumno alumno7 = new Alumno("Nacho", "Pereda", "Mordefuentes");
         Alumno alumno8 = new Alumno("Unai", "Serrano", "Salesianos");
 
@@ -37,9 +48,20 @@ public class Main {
         abombaosLista.add(alumno6);
         teamRocketLista.add(alumno7);
         teamRocketLista.add(alumno8);
-        Equipo.mostrarEquipos(listaEquipos);
+       // Equipo.mostrarEquipos(listaEquipos);
 
-        AtleticoMonzon.mostrarJugadoresEquipos(atleticoMonzonLista);
+    //     AtleticoMonzon.mostrarJugadoresEquipos(atleticoMonzonLista);
+
+        System.out.println();
+
+        listaEquipos.sort(Equipo.getComparatorPorNombre());
+
+        for (Equipo equipo : listaEquipos) {
+            System.out.println(equipo);
+        }
+
+
+
 
     }
 }
