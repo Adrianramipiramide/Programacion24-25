@@ -8,6 +8,11 @@ public class Fechas2 {
     public static void main(String[] args) {
         LocalDate fechaActual = LocalDate.now();
 
+        System.out.printf("number: %d \n", 4);
+
         System.out.printf("La fecha actual es %s",fechaActual.atTime(LocalTime.now()));
+        System.out.println();
+
+        System.out.printf("%.1f",Math.random()*10);
     }
 }
