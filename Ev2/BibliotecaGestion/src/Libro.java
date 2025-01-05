@@ -1,30 +1,47 @@
+import java.util.ArrayList;
+
 public class Libro extends ObjetoBiblioteca implements Prestable {
     private boolean prestado = false;
 
-    public Libro(String codigo, String titulo, String year, boolean prestado) {
+    public Libro(String codigo, String titulo, int year, boolean prestado) {
         super(codigo, titulo, year);
         this.prestado = prestado;
     }
 
+    int contadorPrestados = 0;
 
-    @Override
-    public int cuentaPrestados() {
-        int prestados= 0;
-
-        return prestados;
+    
+    public int cuentaPrestados(ArrayList<ObjetoBiblioteca>l) {
+        int contador = 0;
+        for(ObjetoBiblioteca o : l)
+        System.out.println(contadorPrestados);
+        return contadorPrestados;
     }
 
     @Override
-    public void prestar(Libro l, boolean prestado) {
+    public void prestar() {
+        contadorPrestados++;
+        prestado = true;
 
     }
 
     @Override
-    public void devolverLibro(Libro l, boolean prestado) {
-        if(l.prestado = true){
-            l.prestado = false;
+    public void devolverLibro(boolean prestado) {
+        if (prestado == true) {
+            prestado = false;
         }
         System.out.println("El libro ya no está prestado");
+        contadorPrestados--;
+    }
+
+    public boolean librosAntesDe(Libro l, int year) {
+        if (l.getYear() < year) {
+            System.out.println("El libro si es anterior a la fecha");
+            return true;
+        } else {
+            System.out.println("El libro no es anterior a la fecha " + year);
+            return false;
+        }
     }
 
     @Override

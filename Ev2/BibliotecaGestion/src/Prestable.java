@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public interface Prestable {
-    public int cuentaPrestados();
+    public int cuentaPrestados(ArrayList<ObjetoBiblioteca> l);
 
-    public void prestar(Libro l, boolean prestado);
+    public void prestar();
 
-    public void devolverLibro(Libro l, boolean prestado);
+    public void devolverLibro(boolean prestado);
 }

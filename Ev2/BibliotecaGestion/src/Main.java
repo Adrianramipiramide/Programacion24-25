@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Crea un proyecto con las siguientes características para la gestión de una biblioteca
 que contenga libros y revistas: Las características comunes que se almacenan tanto para las
@@ -21,6 +23,39 @@ cuántas hay anteriores a 1980 utilizando los métodos escritos anteriormente.
  */
 public class Main {
     public static void main(String[] args) {
+
+
+        Libro MakeTime = new Libro("439854", "Make Time", 2024, false);
+        Libro ElArteDeLaGuerra = new Libro("454964", "El Arte de la Guerra", 1028, false);
+
+
+        ArrayList<Libro> listaLibros = new ArrayList();
+        listaLibros.add(MakeTime);
+        listaLibros.add(ElArteDeLaGuerra);
+
+
+        Revista MundoDeportivo = new Revista("545394", "Mbape se retira", 2026, 23);
+        Revista Marca = new Revista("545395", "El Huesca sube a primera", 2025, 78);
+
+        ArrayList<Revista> listaRevistas = new ArrayList();
+        listaRevistas.add(MundoDeportivo);
+        listaRevistas.add(Marca);
+
+        ArrayList<ObjetoBiblioteca> listaFull = new ArrayList();
+        listaFull.add(MakeTime);
+        listaFull.add(ElArteDeLaGuerra);
+        listaFull.add(Marca);
+        listaFull.add(MundoDeportivo);
+
+
+
+        MakeTime.prestar();
+        MakeTime.cuentaPrestados(listaFull);
+        ElArteDeLaGuerra.librosAntesDe(ElArteDeLaGuerra,123);
+
+        System.out.println(Marca.getYear());
+
+
 
     }
 }

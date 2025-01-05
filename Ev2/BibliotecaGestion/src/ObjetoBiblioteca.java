@@ -1,9 +1,9 @@
 public class ObjetoBiblioteca {
     private String codigo;
     private String titulo;
-    private String year;
+    private int year;
 
-    public ObjetoBiblioteca(String codigo, String titulo, String year) {
+    public ObjetoBiblioteca(String codigo, String titulo, int year) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.year = year;
@@ -13,7 +13,7 @@ public class ObjetoBiblioteca {
         return codigo;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
