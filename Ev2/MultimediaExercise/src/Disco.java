@@ -1,7 +1,7 @@
-public class Disco extends Multi{
+public class Disco extends Multi {
     private String genero;
 
-    public Disco(String autor, String titulo, String formato, double duracion, String actorPrincipal, String actrizPrincipal, String genero) {
+    public Disco(String autor, String titulo, String formato, double duracion, String genero) {
         super(autor, titulo, formato, duracion);
         this.genero = genero;
     }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Crea un proyecto con las siguientes características:
 Escribe una clase Multimedia para almacenar información de objetos de tipo multimedia
@@ -33,8 +35,27 @@ Se obtenga cuántas películas no tienen actriz principal.
  */
 public class Main {
     public static void main(String[] args) {
-                Pelicula ElGrinch = new Pelicula("JK.Rowling","El Grinch", "DVD",120.5,"Jeff","Giulia");
+        Pelicula ElGrinch = new Pelicula("JK.Rowling", "El Grinch", "DVD", 120.5, "Jeff", "Giulia");
 
-                System.out.println(ElGrinch.getAutor());
+        System.out.println(ElGrinch.getAutor());
+
+        DiscoPrestable disco1 = new DiscoPrestable("Rosario Flores", "Hola", "Dvd", 45.7, "Pop");
+        DiscoPrestable disco2 = new DiscoPrestable("Mallazo", "Noches de verano", "mp4", 34.2, "Rock");
+        DiscoPrestable disco3 = new DiscoPrestable("La fuga", "Boltaña", "mp3", 65.2, "Rock");
+
+        ArrayList listaDiscos = new ArrayList();
+        listaDiscos.add(disco1);
+        listaDiscos.add(disco2);
+        listaDiscos.add(disco3);
+
+        disco2.prestar();
+        disco1.prestar();
+        disco3.prestar();
+        System.out.println(DiscoPrestable.cuentaPrestados());
+
+
+
+
+
     }
 }
