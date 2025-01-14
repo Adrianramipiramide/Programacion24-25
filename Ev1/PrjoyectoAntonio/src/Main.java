@@ -7,9 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Integer> personas = new HashMap<>();
         int opcion = 0;
-        int vida = 70;
-        int higiene = 50;
-        int fuerza = 50;
+
         while (opcion != 4) {
             System.out.println("----------------------------------------------------");
             System.out.println("BIENVENIDO A MINDZET");
@@ -38,7 +36,7 @@ public class Main {
                 case 4:
                     System.out.println("El juego se ha terminado");
                     System.out.println("Tus resultados finales han sido");
-                    Metodos.mostrarProgreso(vida, higiene, fuerza);
+                    Metodos.mostrarProgreso();
                 default:
                     System.out.println("Introduce un valor correcto");
             }

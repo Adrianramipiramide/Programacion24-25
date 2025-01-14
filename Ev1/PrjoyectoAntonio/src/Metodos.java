@@ -18,30 +18,42 @@ public class Metodos {
         System.out.println("Pasa tiempo de calidad con familia y amigos");
         System.out.println("3 claves para triunfar en la vida: ACTITUD, ESFUERZO e INEGRIDAD");
     }
-
+    static  int vida = 70;
+    static int higiene = 50;
+    static int fuerza = 50;
     //Juego
     public static void juego() {
-        int vida = 70;
-        int higiene = 50;
-        int fuerza = 50;
+
         Scanner sc = new Scanner(System.in);
         System.out.println("LA PARTIDA VA A COMENZAR");
-        caracteristicas(vida, higiene, fuerza);
-        while (vida >= 1) {
-            mostrarProgreso(vida, higiene, fuerza);
-            ejercicio(vida, higiene, fuerza);
-            comer(vida, higiene, fuerza);
-            postre(vida, higiene, fuerza);
-            ejercicio(vida, higiene, fuerza);
-            cenar(vida, higiene, fuerza);
-            eventoRandom(vida, higiene, fuerza);
+        caracteristicas();
+        while (vida >= 1 && vida<100) {
+            mostrarProgreso();
+            ejercicio();
+            comer();
+            postre();
+            ejercicio();
+            cenar();
+            eventoRandom();
+
+            if (vida>=100) {
+                System.out.println("Felicidades  has ganado");
+                mostrarProgreso();
+
+                return;
+            } else if (vida<=0) {
+                System.out.println("Si tu objetivo es tener una vida saludable y plena debes cambiar tus hábitos");
+                mostrarProgreso();
+
+            }
+
 
         }
 
 
     }
 
-    public static void mostrarProgreso(int vida, int higiene, int fuerza) {
+    public static void mostrarProgreso() {
         System.out.println("DATOS DE PROGRESOS");
         System.out.println("La vida es: " + vida);
         System.out.println("La higiene es: " + higiene);
@@ -52,7 +64,7 @@ public class Metodos {
         }
     }
 
-    public static void caracteristicas(int vida, int higiene, int fuerza) {
+    public static void caracteristicas() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Seleccione su género");
         System.out.println("1. Hombre");
@@ -83,7 +95,7 @@ public class Metodos {
 
     }
 
-    public static void comer(int vida, int higiene, int fuerza) {
+    public static void comer() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nES LA HORA DE COMER, ¿QUE PREFIERES?");
         System.out.println("1. Arroz con pollo");
@@ -112,7 +124,7 @@ public class Metodos {
         }
     }
 
-    public static void cenar(int vida, int higiene, int fuerza) {
+    public static void cenar() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nES LA HORA DE CENAR, ¿QUE PREFIERES?");
         System.out.println("1. Nada, hago ayuno hasta mañana");
@@ -141,7 +153,7 @@ public class Metodos {
         }
     }
 
-    public static void postre(int vida, int higiene, int fuerza) {
+    public static void postre() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nPOSTRE, ¿QUE PREFIERES?");
         System.out.println("1. No tomo postre");
@@ -174,7 +186,7 @@ public class Metodos {
     }
 
 
-    public static void ejercicio(int vida, int higiene, int fuerza) {
+    public static void ejercicio() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nES HORA DE DECIDIR QUE HACES ESTA TARDE");
         System.out.println("1. Ver netflix");
@@ -217,7 +229,7 @@ public class Metodos {
         }
     }
 
-    public static void eventoRandom(int vida, int higiene, int fuerza) {
+    public static void eventoRandom() {
         Scanner sc = new Scanner(System.in);
         int opcion = (int) (Math.random() * 3);
         switch (opcion) {
