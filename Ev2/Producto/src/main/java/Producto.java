@@ -9,7 +9,6 @@ public class Producto {
         this.codigo = codigo;
     }
 
-
     public double getPeso() {
         return peso;
     }
