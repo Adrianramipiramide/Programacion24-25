@@ -1,12 +1,20 @@
 public class Producto {
     private double peso;
     private String nombre;
-    private long codigo;
+    private double precio;
+    private int codigo;
+    private int codigoSiguiente = 1;
 
-    public Producto(double peso, String nombre, long codigo) {
+    public Producto(){
+
+
+    }
+
+    public Producto(double peso, String nombre, double precio) {
         this.peso = peso;
         this.nombre = nombre;
-        this.codigo = codigo;
+        this.precio = precio;
+        this.codigo = codigoSiguiente++;
     }
 
     public double getPeso() {
@@ -19,6 +27,10 @@ public class Producto {
 
     public long getCodigo() {
         return codigo;
+    }
+
+    public double getPrecio() {
+        return precio;
     }
 
     @Override
