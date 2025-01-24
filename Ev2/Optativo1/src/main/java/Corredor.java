@@ -13,19 +13,22 @@ public final class Corredor extends Atleta{
         this.velocidadMax = velocidadMax;
         this.sesionesEntrenamiento = sesionesEntrenamiento;
     }
-
+    static double puntuacion = 0;
     @Override
     public void competir() {
-
+        puntuacion =  Math.random()*100;
+        System.out.println("El corredor está compitiendo");
+        System.out.printf("Ha obtenido una puntiacion de %.2f \n", puntuacion);
     }
 
     @Override
     public void entrenar() {
-
+        System.out.println("El corredor esta entranado");
     }
 
     @Override
     public double obtenerPuntuacion() {
-        return 0;
+        System.out.println("La puntuacion es "+puntuacion);
+        return puntuacion;
     }
 }
