@@ -6,6 +6,12 @@ public class Competicion {
     private static ArrayList<Atleta> atletas = new ArrayList<>();
     private int capacidadMaxima;
 
+    public Competicion(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Competicion(){}
+
     public static void agregarAtlerta(Atleta atleta) {
         atletas.add(atleta);
     }
@@ -26,7 +32,9 @@ public class Competicion {
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
+
     static double[] puntuaciones;
+
     //Dar valores aleatorios a los atletas como si hubieran participado y guardar los resultados en una lista
     public static void simularCompeticion() {
 
@@ -34,23 +42,22 @@ public class Competicion {
 
         for (Atleta a : atletas) {
             puntuacion = (Math.random() * 100);
-            System.out.printf("%s su puntuacion es  %.2f \n",a.getNombre(), puntuacion);
+            System.out.printf("%s su puntuacion es  %.2f \n", a.getNombre(), puntuacion);
             puntuaciones = new double[]{puntuacion};
         }
     }
 
-  /*
-    public Atleta determinarGanador() {
-       int ganadorPuntuacion = 0;
-        for (Atleta a : atletas) {
-            int maxPuntuacion = 0;
-            if (puntuaciones[a]>= maxPuntuacion){
-                maxPuntuacion = a;
-            }
-        }
-        return atletas[0];
-    }
 
-   */
+    public Atleta determinarGanador() {
+        Atleta ganador = null;
+        int ganadorPuntuacion = 0;
+        for (int i = 0; i < atletas.size(); i++) {
+            if (puntuaciones[i] >= ganadorPuntuacion) {
+                ganadorPuntuacion = i;
+            }
+            ganador = atletas.get(i);
+        }
+        return ganador;
+    }
 
 }
