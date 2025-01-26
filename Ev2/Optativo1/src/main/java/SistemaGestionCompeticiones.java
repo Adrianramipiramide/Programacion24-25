@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Comparator;
+
 
 public class SistemaGestionCompeticiones implements Comparable<Competicion> {
     ArrayList<Competicion> competiciones= new ArrayList();

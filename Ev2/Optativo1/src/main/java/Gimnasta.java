@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Gimnasta extends Atleta {
+public final class Gimnasta extends Atleta {
     private EspecialidadGimnasia especialidadGimnasia;
     private double dificultadRutina;
     private double puntiacionMaxima;
