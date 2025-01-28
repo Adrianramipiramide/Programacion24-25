@@ -4,7 +4,7 @@ import java.util.List;
 public class Competicion {
     private String nombre;
     private static ArrayList<Atleta> atletas = new ArrayList<>();
-    private int capacidadMaxima;
+    private final static int CapacidadMaxima = 20;
 
     public Competicion(String nombre) {
         this.nombre = nombre;
@@ -12,8 +12,14 @@ public class Competicion {
 
     public Competicion(){}
 
-    public static void agregarAtlerta(Atleta atleta) {
-        atletas.add(atleta);
+    public static void agregarAtlerta(Atleta atleta) throws IndexOutOfBoundsException{
+
+        if(atletas.size()>= CapacidadMaxima){
+            throw new IndexOutOfBoundsException("La competicion está llena");
+        }else{
+            atletas.add(atleta);
+        }
+
     }
 
     public void agregarAtletas(ArrayList<Atleta> listaAtletas) {
@@ -30,7 +36,7 @@ public class Competicion {
     }
 
     public int getCapacidadMaxima() {
-        return capacidadMaxima;
+        return CapacidadMaxima;
     }
 
     static double[] puntuaciones;
@@ -42,7 +48,7 @@ public class Competicion {
 
         for (Atleta a : atletas) {
             puntuacion = (Math.random() * 100);
-            System.out.printf("%s su puntuacion es  %.2f \n", a.getNombre(), puntuacion);
+            System.out.printf("%s su puntuacion es  %.2f \n", a.getNombre(),puntuacion);
             puntuaciones = new double[]{puntuacion};
         }
     }
@@ -50,12 +56,12 @@ public class Competicion {
 
     public Atleta determinarGanador() {
         Atleta ganador = null;
-        int ganadorPuntuacion = 0;
+        double ganadorPuntuacion = 0;
         for (int i = 0; i < atletas.size(); i++) {
             if (puntuaciones[i] >= ganadorPuntuacion) {
                 ganadorPuntuacion = i;
+                ganador = atletas.get(i);
             }
-            ganador = atletas.get(i);
         }
         return ganador;
     }

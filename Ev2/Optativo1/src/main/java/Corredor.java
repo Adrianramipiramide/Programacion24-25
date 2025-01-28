@@ -31,4 +31,11 @@ public final class Corredor extends Atleta{
         System.out.println("La puntuacion es "+puntuacion);
         return puntuacion;
     }
+
+    @Override
+    public String toString() {
+        return "Corredor{ " + getNombre() +" "+
+                "velocidadMax=" + velocidadMax +
+                '}';
+    }
 }

@@ -9,15 +9,18 @@ public final class Nadador extends Atleta{
         this.estiloNatacion = estiloNatacion;
         this.mejorTiempo = mejorTiempo;
     }
-
+    static double puntuacion;
     @Override
     public void competir(){
         System.out.println("Esta compitiendo");
+        puntuacion =  Math.random()*100;
+        System.out.println("El nadador está compitiendo");
+        System.out.printf("Ha obtenido una puntiacion de %.2f \n", puntuacion);
     }
 
     @Override
     public void entrenar() {
-
+        System.out.println("El nadador está entrenando");
     }
 
     @Override
