@@ -26,6 +26,7 @@ public class SistemaGestionCompeticiones implements Comparable<Competicion> {
         }
     }
 
+
     @Override
     public int compareTo(Competicion o) {
         int resultado = 0;

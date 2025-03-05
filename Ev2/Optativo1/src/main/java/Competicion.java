@@ -12,7 +12,7 @@ public class Competicion {
 
     public Competicion(){}
 
-    public static void agregarAtlerta(Atleta atleta) throws IndexOutOfBoundsException{
+    public static void agregarAtlerta(Atleta atleta){
 
         if(atletas.size()>= CapacidadMaxima){
             throw new IndexOutOfBoundsException("La competicion está llena");
@@ -53,7 +53,6 @@ public class Competicion {
         }
     }
 
-
     public Atleta determinarGanador() {
         Atleta ganador = null;
         double ganadorPuntuacion = 0;
@@ -65,5 +64,4 @@ public class Competicion {
         }
         return ganador;
     }
-
 }
