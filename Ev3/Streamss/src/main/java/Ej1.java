@@ -14,11 +14,6 @@ public class Ej1 {
 
             int numVocales = 0;
 
-
-
-
-            
-
             System.out.println(args[0]);
 
             int lectorCaracteres ;
