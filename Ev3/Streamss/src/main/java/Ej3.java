@@ -14,10 +14,11 @@ public class Ej3 {
 
         String ruta = "/home/estudiante/Escritorio/Programacion24-25/Ev3/Streamss/target/entrada.txt";
         try(BufferedReader bf = new BufferedReader(new FileReader(ruta))){
+            String linea;
+            while ((linea = bf.readLine()) != null) {
 
-            while (bf.read() != -1) {
-
-                contadorPalabras++;
+                String[] palabras  = linea.split(" ");
+                contadorPalabras += palabras.length;
 
             }
 
