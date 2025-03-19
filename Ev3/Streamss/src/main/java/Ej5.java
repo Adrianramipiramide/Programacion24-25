@@ -1,5 +1,4 @@
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -17,12 +16,10 @@ public class Ej5 {
 
         String invertida = new StringBuilder(caracteres).reverse().toString();
 
-
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))){
 
             bw.write(invertida);
             System.out.println(invertida);
-
 
         }catch(IOException e){
             e.printStackTrace();
