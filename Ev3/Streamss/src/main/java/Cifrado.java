@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class Cifrado {
 
+/*
 
-
-    public static char cifrarCaracteres(char entrada, int desplazamiento){
+public static char cifrarCaracteres(char entrada, int desplazamiento){
 
         char salida = (char) (entrada + desplazamiento);
 
@@ -48,5 +48,8 @@ public class Cifrado {
     public static void descifrarFichero(char entrada, int desplazamiento){
 
     }
+ */
+
+
 
 }
