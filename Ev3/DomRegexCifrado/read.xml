@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectosEnergiaSostenible>
+    <proyecto id="P001">
+        <nombre>Parque Solar Las Rozas</nombre>
+        <tipoEnergia>solar</tipoEnergia>
+        <capacidadInstalada>75.5</capacidadInstalada>
+        <ubicacion>
+            <ciudad>Las Rozas</ciudad>
+            <provincia>Madrid</provincia>
+            <coordenadas>
+                <latitud>40.4983</latitud>
+                <longitud>-3.8726</longitud>
+            </coordenadas>
+        </ubicacion>
+        <fechaInicio>2022-03-15</fechaInicio>
+        <presupuesto moneda="EUR">12500000</presupuesto>
+        <estado>activo</estado>
+    </proyecto>
+
+    <proyecto id="P002">
+        <nombre>Parque Eólico Monte Alto</nombre>
+        <tipoEnergia>eolica</tipoEnergia>
+        <capacidadInstalada>120.0</capacidadInstalada>
+        <ubicacion>
+            <ciudad>Medina del Campo</ciudad>
+            <provincia>Valladolid</provincia>
+            <coordenadas>
+                <latitud>41.3089</latitud>
+                <longitud>-4.9171</longitud>
+            </coordenadas>
+        </ubicacion>
+        <fechaInicio>2021-08-22</fechaInicio>
+        <presupuesto moneda="EUR">18750000</presupuesto>
+        <estado>construccion</estado>
+    </proyecto>
+
+    <proyecto id="P003">
+        <nombre>Central Hidroeléctrica Río Verde</nombre>
+        <tipoEnergia>hidraulica</tipoEnergia>
+        <capacidadInstalada>95.2</capacidadInstalada>
+        <ubicacion>
+            <ciudad>Cazorla</ciudad>
+            <provincia>Jaén</provincia>
+            <coordenadas>
+                <latitud>37.9144</latitud>
+                <longitud>-2.9988</longitud>
+            </coordenadas>
+        </ubicacion>
+        <fechaInicio>2023-01-10</fechaInicio>
+        <presupuesto moneda="EUR">22000000</presupuesto>
+        <estado>planificacion</estado>
+    </proyecto>
+
+    <proyecto id="P004">
+        <nombre>Planta Solar Fotovoltaica Almería Sur</nombre>
+        <tipoEnergia>solar</tipoEnergia>
+        <capacidadInstalada>150.8</capacidadInstalada>
+        <ubicacion>
+            <ciudad>Níjar</ciudad>
+            <provincia>Almería</provincia>
+            <coordenadas>
+                <latitud>36.9667</latitud>
+                <longitud>-2.1333</longitud>
+            </coordenadas>
+        </ubicacion>
+        <fechaInicio>2022-11-30</fechaInicio>
+        <presupuesto moneda="EUR">28500000</presupuesto>
+        <estado>activo</estado>
+    </proyecto>
+
+    <proyecto id="P005">
+        <nombre>Parque Eólico Costa Atlántica</nombre>
+        <tipoEnergia>eolica</tipoEnergia>
+        <capacidadInstalada>200.0</capacidadInstalada>
+        <ubicacion>
+            <ciudad>Tarifa</ciudad>
+            <provincia>Cádiz</provincia>
+            <coordenadas>
+                <latitud>36.0144</latitud>
+                <longitud>-5.6028</longitud>
+            </coordenadas>
+        </ubicacion>
+        <fechaInicio>2023-04-01</fechaInicio>
+        <presupuesto moneda="EUR">35000000</presupuesto>
+        <estado>construccion</estado>
+    </proyecto>
+</proyectosEnergiaSostenible>

@@ -8,11 +8,18 @@ public class BuscarIpRegex {
     public static void main(String[] args) {
 
         try(BufferedReader bf = new BufferedReader(new FileReader("/home/estudiante/Escritorio/Programacion24-25/Ev3/Streamss/access.log"))){
-            String regex = "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b\n";
+            String regex = "chic.s";
+            String texto ="chicos chicos chicos chicos chicos chicos chicos chicos chicos";
             Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher("/home/estudiante/Escritorio/Programacion24-25/Ev3/Streamss/access.log");
+            Matcher matcher = pattern.matcher(texto);
             System.out.println(matcher.find());
-            //System.out.println(matcher.group());
+            int cont=0;
+            while(matcher.find()){
+
+                    cont++;
+
+            }
+            System.out.println(cont);
         }catch (IOException e){
             System.out.println("Error");
         }
