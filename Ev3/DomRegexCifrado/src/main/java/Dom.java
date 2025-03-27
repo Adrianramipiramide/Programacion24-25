@@ -3,7 +3,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,11 +17,11 @@ public class Dom {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             File file = new File("/home/estudiante/Escritorio/Programacion24-25/Ev3/DomRegexCifrado/read.xml");
             Document document = documentBuilder.parse(file);
-
+            
             Element root = document.getDocumentElement();
             NodeList nodeList = root.getElementsByTagName("proyectoEnergiaSostenible");
             for (int i = 0; i < nodeList.getLength(); i++) {
-                NodeList nodoAc = (NodeList) nodeList.item(0);
+                NodeList nodoAc = (NodeList) nodeList;
                 Element proyecto = (Element) nodeList.item(i);
                 Element nombre = (Element) proyecto.getElementsByTagName("nombre").item(0);
                 Element ubicacion = (Element) proyecto;
@@ -38,9 +37,7 @@ public class Dom {
 
                 String nombre1 = nombre.getTextContent();
                 Proyecto proyecto1 = new Proyecto(nombre1);
-                System.out.println(proyecto1);
-
-
+                System.out.println("Imprimiendo "+proyecto1);
             }
 
 
