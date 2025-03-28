@@ -1,6 +1,5 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
@@ -17,13 +16,14 @@ public class Dom {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             File file = new File("/home/estudiante/Escritorio/Programacion24-25/Ev3/DomRegexCifrado/read.xml");
             Document document = documentBuilder.parse(file);
-            
+
             Element root = document.getDocumentElement();
-            NodeList nodeList = root.getElementsByTagName("proyectoEnergiaSostenible");
+            NodeList nodeList = root.getElementsByTagName("proyecto");
             for (int i = 0; i < nodeList.getLength(); i++) {
                 NodeList nodoAc = (NodeList) nodeList;
                 Element proyecto = (Element) nodeList.item(i);
                 Element nombre = (Element) proyecto.getElementsByTagName("nombre").item(0);
+                Element tipo = (Element) proyecto.getElementsByTagName("tipoEnergia").item(0);
                 Element ubicacion = (Element) proyecto;
                 Element ciudad = (Element) ubicacion.getElementsByTagName("ciudad").item(0);
                 Element provincia = (Element) ubicacion.getElementsByTagName("provincia").item(0);
@@ -35,11 +35,12 @@ public class Dom {
                 presupuesto.getAttribute("moneda");
                 Element estado = (Element) proyecto.getElementsByTagName("estado").item(0);
 
+
+                String moneda1 = presupuesto.getAttribute("moneda");
                 String nombre1 = nombre.getTextContent();
-                Proyecto proyecto1 = new Proyecto(nombre1);
+                Proyecto proyecto1 = new Proyecto(nombre1,moneda1);
                 System.out.println("Imprimiendo "+proyecto1);
             }
-
 
         } catch (SAXException e) {
             e.printStackTrace();

@@ -12,9 +12,11 @@ public class Proyecto {
     Date fecha;
     double presupuesto;
     boolean estado;
+    String moneda;
 
-    public Proyecto(String nombre){
+    public Proyecto(String nombre, String moneda){
         this.nombre= nombre;
+        this.moneda = moneda;
     }
 
     public Proyecto(String id, String nombre, EnergiasRenovables tipo, double capacidad, String ciudad, String provincia, double latitud, double altitud, Date fecha, double presupuesto, boolean estado) {
@@ -122,7 +124,8 @@ public class Proyecto {
     @Override
     public String toString() {
         return "Proyecto{" +
-                "nombre='" + nombre + '\'' +
+                "moneda='" + moneda + '\'' +
+                ", nombre='" + nombre + '\'' +
                 '}';
     }
 }
