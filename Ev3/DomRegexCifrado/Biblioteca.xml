@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Biblioteca>
+    <nombre>Ramon J Sender</nombre>
+    <localidad>Monzón</localidad>
+    <numLibros>345</numLibros>
+    <bibliotecarios>2</bibliotecarios>
+    <nombre>Julio Cesar</nombre>
+    <localidad>Huesca</localidad>
+    <numLibros>455</numLibros>
+    <bibliotecarios>4</bibliotecarios>
+</Biblioteca>
