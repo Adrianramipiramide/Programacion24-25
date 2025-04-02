@@ -18,7 +18,7 @@ public class ej12 {
             } else if (archivo.isDirectory()) {
                 System.out.println("Es un directorio.");
             }
-            
+
             System.out.println("Tamaño: " + archivo.length() + " bytes");
 
             // Mostrar permisos de lectura y escritura

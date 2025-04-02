@@ -22,9 +22,7 @@ public class Ej4 {
         Document document = db.newDocument();
 
         Element root = document.createElement("empleado");
-        for (int i = 0; i < ; i++) {
-            
-        }
+
 
         TransformerFactory tsf = TransformerFactory.newDefaultInstance();
         Transformer ts = tsf.newTransformer();
