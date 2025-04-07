@@ -35,35 +35,35 @@ public class Ej2 {
 
 
         boton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-            try{
-                int num = Integer.parseInt(etiqueta1.getText());
-                int num2 = Integer.parseInt(etiqueta2.getText());
-                resulatado.setText("Resultado "+(num+num2));
-            }catch(NumberFormatException e){
-
-                System.out.println("Numero Incorrecto");
-
-            }
-                                    }
-                                }
-        );
-
-        boton2.addActionListener(new ActionListener() {
                                     @Override
                                     public void actionPerformed(ActionEvent actionEvent) {
-                                        try{
+                                        try {
                                             int num = Integer.parseInt(etiqueta1.getText());
                                             int num2 = Integer.parseInt(etiqueta2.getText());
-                                            resulatado.setText("Resultado "+(num-num2));
-                                        }catch(NumberFormatException e){
+                                            resulatado.setText("Resultado " + (num + num2));
+                                        } catch (NumberFormatException e) {
 
                                             System.out.println("Numero Incorrecto");
 
                                         }
                                     }
                                 }
+        );
+
+        boton2.addActionListener(new ActionListener() {
+                                     @Override
+                                     public void actionPerformed(ActionEvent actionEvent) {
+                                         try {
+                                             int num = Integer.parseInt(etiqueta1.getText());
+                                             int num2 = Integer.parseInt(etiqueta2.getText());
+                                             resulatado.setText("Resultado " + (num - num2));
+                                         } catch (NumberFormatException e) {
+
+                                             System.out.println("Numero Incorrecto");
+
+                                         }
+                                     }
+                                 }
         );
 
         marco.setVisible(true);
