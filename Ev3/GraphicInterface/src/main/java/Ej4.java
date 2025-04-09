@@ -7,7 +7,7 @@ public class Ej4 {
     public static void main(String[] args) {
 
         JFrame jfram = new JFrame("Calculadora");
-        jfram.setLayout(new GridLayout(4,4,10,5));
+        jfram.setLayout(new GridLayout(5,3,4,15));
         jfram.setSize(300,400);
         JLabel etiqueta = new JLabel("Dato 1");
         JLabel etiqueta2 = new JLabel("Dato 2");
@@ -20,12 +20,14 @@ public class Ej4 {
         JButton multiply = new JButton("*");
         JButton dividir = new JButton("/");
         ImageIcon i = new ImageIcon("/home/estudiante/Descargas/exit.jpg","Foto salida");
-        ImageIcon teclado = new ImageIcon("/home/estudiante/Descargas/teclado.jpg", "Teclado");
+        ImageIcon teclado = new ImageIcon("/home/estudiante/Descargas/teclado.jpg");
         JLabel fotonTeclado = new JLabel(teclado);
         JButton salir = new JButton(i);
-        
-        jfram.add(fotonTeclado);
 
+
+        jfram.add(new JLabel(""));
+        jfram.add(fotonTeclado);
+        jfram.add(new JLabel(""));
         jfram.add(etiqueta);
         jfram.add(area);
         jfram.add(sumar);
@@ -39,10 +41,17 @@ public class Ej4 {
         jfram.add(salir);
         jfram.add(dividir);
 
-
-
-
         jfram.setVisible(true);
+
+
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(salir.isEnabled()){
+                    jfram.setVisible(false);
+                }
+            }
+        });
 
         sumar.addActionListener(new ActionListener() {
             @Override
