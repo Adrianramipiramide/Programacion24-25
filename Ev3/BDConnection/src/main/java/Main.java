@@ -6,7 +6,7 @@ public class Main {
 
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://database-1.cpwoqsmqg94x.us-east-1.rds.amazonaws.com/SAMPLE","admin","ARfed099");
-            String consulta = "select * from Libros where id = 1";
+            String consulta = "select * from Libros where idLibro = 1";
             Statement statement = conexion.createStatement();
             ResultSet resultSet = statement.executeQuery(consulta);
 
